@@ -1,0 +1,43 @@
+/*Desarrolle el siguiente componente web, tomando en consideración agregarle una animación para que el
+componente de la sensación de aparecer en la pantalla unos segundos después de ingresar a la web, también
+cuando se posicione sobre el botón “pagar”, que cambie la interacción del ratón o cursor, es decir cambiar
+el puntero -> sugerencia: investigar la pseudo-clase “hover” y la propiedad de css “cursor: pointer;*/
+
+/* Animación de aparición para todo el carrito */
+.shopping-cart {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecer 1s ease forwards;
+    animation-delay: 0.5s; /* medio segundo después de cargar */
+    background-color: aqua;
+    width: 250px;
+    height: 250px;
+    padding: 200px;
+    align-items: center;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto hover en el botón pagar */
+.btn-pay {
+    color: brown;
+    cursor: pointer; /* cambia el cursor al pasar */
+    transition: transform 0.3s ease;
+}
+
+.btn-pay:hover {
+    transform: scale(1.05); /* efecto de agrandar ligeramente */
+    background-color: blue;
+    color: violet;
+}
